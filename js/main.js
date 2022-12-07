@@ -68,17 +68,6 @@ jQuery(document).ready(function($) {
         })
 
 
-
-        $(".pop-button").click(function () {
-            $(".pop").fadeIn(300);
-            
-        });
-
-        $(".pop > span").click(function () {
-            $(".pop").fadeOut(300);
-        });
-
-
         $(window).on("scroll", function() {
             if($(window).scrollTop() > 100) {
                 $(".header").addClass("active");

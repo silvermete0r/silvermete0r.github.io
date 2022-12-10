@@ -8,7 +8,7 @@ cpmTag = document.querySelector(".cpm span"),
 tryAgainBtn = document.querySelector("button");
 
 let timer, wpm,
-maxTime = 2,
+maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
@@ -60,6 +60,7 @@ function initTyping() {
 		cpmTag.innerText = charIndex - mistakes;
 	} else {
 		let accuracy = ((charIndex - mistakes) * 100 / charIndex).toFixed(1);
+		accuracy = accuracy < 0 || !accuracy || accuracy == Infinity || accuracy == NaN ? 0 : accuracy;
 		let resultText = 'Дәлдік деңгейі: <b>' + accuracy + '</b>% <br>Минутына Терілген Сөз саны: <b>' + wpm + '</b> сөз<br>Минутына Терілген Таңба саны: <b>' + (charIndex - mistakes) + '</b> таңба';
 		let resultTitle = '';
 		if(wpm < 40) {
@@ -101,6 +102,22 @@ function resetGame() {
 	mistakeTag.innerText = mistakes;
 	wpmTag.innerText = 0;
 	cpmTag.innerText = 0;
+	const Toast = Swal.mixin({
+	  toast: true,
+	  position: 'top-end',
+	  showConfirmButton: false,
+	  timer: 2000,
+	  timerProgressBar: true,
+	  didOpen: (toast) => {
+	    toast.addEventListener('mouseenter', Swal.stopTimer)
+	    toast.addEventListener('mouseleave', Swal.resumeTimer)
+	  }
+	})
+
+	Toast.fire({
+	  icon: 'success',
+	  title: 'Жаңа Сөз Сәтті Жүктелді!'
+	})
 }
 
 randomParagraph();

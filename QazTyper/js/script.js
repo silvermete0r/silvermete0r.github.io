@@ -63,8 +63,12 @@ function initTyping() {
 		accuracy = accuracy < 0 || !accuracy || accuracy == Infinity || accuracy == NaN ? 0 : accuracy;
 		let resultText = 'Дәлдік деңгейі: <b>' + accuracy + '</b>% <br>Минутына Терілген Сөз саны: <b>' + wpm + '</b> сөз<br>Минутына Терілген Таңба саны: <b>' + (charIndex - mistakes) + '</b> таңба';
 		let resultTitle = '';
-		if(wpm < 40) {
-			resultTitle = '<strong>Жарайсыз, Жақсы Нәтиже!</strong>';
+		if(accuracy < 60) {
+			resultTitle = '<strong>Қате-қате, Дұрыстап Жазуға Тырысыңыз!</strong>';
+		} else if(wpm < 25) {
+			resultTitle = '<strong>Өте Жәй, Шапшаңырақ Жазуға Тырысыңыз!</strong>';
+		} else if(wpm < 40) {
+			resultTitle = '<strong>Жаман Емес, Қанағаттандырарлық Нәтиже!</strong>';
 		} else if(wpm < 60) {
 			resultTitle = '<strong>Жарайсыз, Керемет Нәтиже!</strong>';
 		} else {

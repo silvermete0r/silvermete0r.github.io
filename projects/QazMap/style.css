@@ -107,3 +107,18 @@ img {
 .btn:hover {
 	background: #226FA5;
 }
+
+@media only screen and (max-width: 600px) {
+	.tooltip {
+		font-size: 9px;
+		padding: 3px;
+	}
+
+	.info {
+		width: 75%;
+	}
+
+	.info_title {
+		font-size: 23px;
+	}
+}

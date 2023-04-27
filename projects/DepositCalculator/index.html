@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Deposit Calculator</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>💸 Deposit Calculator</h1>
+  </header>
+  <form class="calculator" name="calculator">
+    <table>
+      <tr>
+        <td class="cap">🏦 Deposit Rates of Banks</td>
+        <td>
+          <select name="banks">
+            <option value="15">Kaspi (15%)</option>
+            <option value="14" selected>Halyk (14%)</option>
+            <option value="15.5">Freedom (15.5%)</option>
+            <option value="14.5">Forte (14.5%)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="cap">💰 Initial Deposit</td>
+        <td>
+          <input name="money" type="number" value="10000" required>
+        </td>
+      </tr>
+      <tr>
+        <td class="cap">⌛ How many months?</td>
+        <td>
+          <select name="months">
+            <option value="3">3 (minimum)</option>
+            <option value="6">6 (half-year)</option>
+            <option value="12" selected>12 (one year)</option>
+            <option value="18">18 (1.5 years)</option>
+            <option value="24">24 (2 years)</option>
+            <option value="30">30 (2.5 years)</option>
+            <option value="36">36 (3 years)</option>
+            <option value="60">60 (5   years)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="cap">📈 Interest per year?</td>
+        <td>
+          <input name="interest" type="number" value="5" required>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <table id="diagram">
+    <tr>
+      <th class="cap">Was:</th>
+      <th class="cap">Becomes:</th>
+    </tr>
+    <tr>
+      <th id="money-before" class="money"></th>
+      <th id="money-after" class="money"></th>
+    </tr>
+    <td>
+      <div id="height-before"></div>
+    </td>
+    <td>
+      <div id="height-after"></div>
+    </td>
+  </table>
+
+  <div class="result">
+    <span class="cap">💵 Total Growth: </span><span id="result" class="money">0</span>
+  </div>  
+
+  <script src="main.js"></script>
+
+</body>
+</html>

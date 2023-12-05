@@ -701,6 +701,34 @@ footer .connect-us ul li a:hover {
 
 }
 
+.circle-widget {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to position the widget vertically */
+    right: 20px; /* Adjust this value to position the widget horizontally */
+    width: 50px; /* Adjust the size of the widget */
+    height: 50px; /* Adjust the size of the widget */
+    background-color: #1DA1F2; /* Adjust the background color */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Adjust the text color */
+    cursor: pointer;
+    border: 1px solid #1DA1F2;
+    transition: .6s ease;
+}
+
+.circle-widget:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	color: #1DA1F2;
+	background-color: #ececec;
+	border: 1px solid #1DA1F2;
+}
+
+.verified-badge {
+	font-size: 2.1em;
+}
+
 @media (max-width: 385px){
 
 	footer .location ul li {

@@ -303,31 +303,6 @@ bootstrap.min.css:5
 	padding: 100px 0px;
 }
 
-#quotes .testimonials-item h4 {
-	color: #fff;
-	font-size: 17px;
-	font-weight: 500;
-	letter-spacing: 0.5px;
-	margin-top: 30px;
-	margin-bottom: 5px;
-}
-
-#quotes .testimonials-item span {
-	font-size: 13px;
-	color: #fff;
-	letter-spacing: 0.5px;
-}
-
-#quotes .testimonials-item p {
-	font-size: 16px;
-	color: #9a9a9a;
-	font-style: italic;
-	font-weight: 300;
-	background-color: #fff;
-	padding: 30px;
-	border-radius: 5px;	
-}
-
 .owl-pagination {
   margin-top: 20px;
   opacity: 1;
